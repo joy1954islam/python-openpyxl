@@ -15,3 +15,14 @@ for name in range(1, max_row+1):
 
 for item in range(1, max_row+1):
     print('mobile number = ', sheet.cell(item, 1).value, "name = ", sheet.cell(item, 2).value)
+
+# print all data in row
+for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_row, max_col=max_column):
+    for cell in row:
+        print(cell.value, end=" ")
+    print()
+
+for row in sheet.iter_rows(min_row=1, min_col=1, max_row=max_row, max_col=2):
+    for cell in row:
+        print(cell.value, end=" ")
+    print()
